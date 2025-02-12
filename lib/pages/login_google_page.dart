@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_search_coffee_shop/pages/home_page.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginGooglePage extends StatelessWidget {
@@ -85,12 +87,17 @@ class LoginGooglePage extends StatelessWidget {
                               SizedBox(
                                 width: 30,
                               ),
-                              Text(
-                                "Login Sekarang",
-                                style: GoogleFonts.sora(
-                                  color: Colors.black,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
+                              TextButton(
+                                onPressed: () {
+                                  Get.offAll(HomePage());
+                                },
+                                child: Text(
+                                  "Login Sekarang",
+                                  style: GoogleFonts.sora(
+                                    color: Colors.black,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
                             ],
